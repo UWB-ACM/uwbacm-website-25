@@ -6,9 +6,8 @@
         "dev": "next dev --turbopack",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint --fix",
-        "format": "prettier --write src/",
-        "lint-check": "prettier --check src/ && next lint"
+        "lint": "next lint --fix && prettier --write src/",
+        "lint-check": "prettier --check src/ && next lint --max-warnings 0"
     },
     "dependencies": {
         "@radix-ui/react-checkbox": "^1.1.4",
