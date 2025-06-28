@@ -1,7 +1,7 @@
-import type { Metadata, Viewport } from "next";
-import React from "react";
-import { Inter, Rubik_Mono_One, Open_Sans } from "next/font/google";
 import "./globals.css";
+import React from "react";
+import type { Metadata, Viewport } from "next";
+import { Inter, Open_Sans } from "next/font/google";
 import Footer from "../components/Footer";
 
 const inter = Inter({
@@ -16,49 +16,43 @@ const openSans = Open_Sans({
     weight: ["400"],
 });
 
-const rubikMonoOne = Rubik_Mono_One({
-    variable: "--font-rubik-mono-one",
-    subsets: ["latin"],
-    weight: ["400"],
-});
-
-const title = "UWB Hacks 2025";
+const title = "UWB ACM";
 const description =
-    "Students assemble! We need your skills, NOW! Combine forces and push your potential to the limit at the 9th annual UW Bothell Hackathon, UWB Hacks: Save the World!";
-const url = "https://uwbhacks.com/";
+    "ACM UWB is a student-run club at the University of Washington Bothell that aims to provide a community for students to learn and grow in the computer science field.";
+// const url = "https://acm.uwb.edu/";
 
 export const metadata: Metadata = {
     title,
     description,
-    alternates: {
-        canonical: url,
-    },
-    twitter: {
-        title,
-        description,
-        card: "summary_large_image",
-        images: {
-            url: "https://uwbhacks.com/card-image.webp",
-            width: 1984,
-            height: 1208,
-        },
-    },
+    // alternates: {
+    //     canonical: url,
+    // },
+    // twitter: {
+    //     title,
+    //     description,
+    //     card: "summary_large_image",
+    //     images: {
+    //         url: "https://uwbhacks.com/card-image.webp",
+    //         width: 1984,
+    //         height: 1208,
+    //     },
+    // },
     openGraph: {
-        url,
+        // url,
         title,
         description,
         locale: "en_US",
-        images: {
-            url: "https://uwbhacks.com/card-image.webp",
-            width: 1984,
-            height: 1208,
-        },
+        // images: {
+        //     url: "https://uwbhacks.com/card-image.webp",
+        //     width: 1984,
+        //     height: 1208,
+        // },
     },
     robots: "max-image-preview:large",
 };
 
 export const viewport: Viewport = {
-    themeColor: "#f36a1a",
+    themeColor: "#000000",
 };
 
 export default function RootLayout({
@@ -69,7 +63,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${inter.variable} ${openSans.variable} ${rubikMonoOne.variable} antialiased w-full`}
+                className={`${inter.variable} ${openSans.variable} antialiased w-full`}
             >
                 {children}
                 <Footer />
